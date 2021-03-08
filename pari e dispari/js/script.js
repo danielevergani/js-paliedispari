@@ -41,20 +41,21 @@ var bottone = document.getElementById("btn");
 function pariOdispari(previsione, num){
     
     var numRandom = Math.floor(Math.random() * 5) + 1;
+    console.log(numRandom);
     var totale = numRandom + num;
+    console.log(totale);
     
     // condizione da verificare
 
     if ( ( (totale % 2 == 0) && previsione.value == "pari" ) || ( (totale % 2 != 0) && previsione.value == "dispari" ) ){
-        return "hai vinto con il numero " + totale
+        console.log ("hai vinto con il numero " + totale)
     }
     else{
-        return "hai perso con il numero " + totale
+        console.log ("hai perso con il numero " + totale)
     }
 }
 
 
-bottone.addEventListener ("click",pariOdispari);
+bottone.addEventListener ("click", function(){ pariOdispari(scelta, numero); });
 
-function pariOdispari(scelta, numero)
 
