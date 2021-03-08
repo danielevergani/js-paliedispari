@@ -30,12 +30,14 @@
 
 var scelta = document.getElementById("pd");
 var numero;
-do {
-    numero = parseInt( prompt("scrivi un numero tra 1 e 5" ) );
-} while ((numero < 1) || (numero > 5));
 var bottone = document.getElementById("btn");
 var reset = document.getElementById("res");
 
+function iniziaGioco(){
+    do {
+        numero = parseInt( prompt("scrivi un numero tra 1 e 5" ) );
+    } while ((numero < 1) || (numero > 5));
+}
 
 
 
@@ -59,9 +61,5 @@ function pariOdispari(previsione, num){
 
 bottone.addEventListener ("click", function(){ pariOdispari(scelta, numero); });
 
-reset.addEventListener ("click",
-    function(){
-        location.reload();
-    }
-);
+reset.addEventListener ("click", iniziaGioco);
 
