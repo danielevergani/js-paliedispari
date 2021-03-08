@@ -11,9 +11,16 @@ function palindroma(x){
     } 
     console.log(lista);
 
-    // inverto array e assegno a un'altra variabile
-    var revLista = lista.reverse();
-    console.log(revLista);
+    // condizione per palindromia 
+    if (lista.toString() == lista.reverse().toString()){
+        return "la parola è palindroma"
+    }
+    else{
+        return "la parola non è palindroma"
+    }
+    
+
 }
 
-palindroma(parola);
+var risultato = palindroma(parola);
+alert(risultato);
